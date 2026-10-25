@@ -1,11 +1,36 @@
 .bird {
   position: absolute;
   left: 100px;
-  width: 30px;
-  height: 30px;
-  background-color: #ff2a74;
-  border-radius: 50%;
-  border: 2px solid #fff;
+  width: 34px;
+  height: 26px;
+  background-color: #ffcc00; /* Жовте тіло пташки */
+  border-radius: 50% 50% 40% 40%;
+  border: 2px solid #333;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.1s linear;
+}
+
+/* Дзьоб пташки */
+.bird::before {
+  content: "";
+  position: absolute;
+  right: -8px;
+  top: 8px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid #ff6600; /* Оранжевий дзьоб */
+}
+
+/* Крильце */
+.bird::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 9px;
+  width: 12px;
+  height: 8px;
+  background-color: #e6b800;
+  border-radius: 50%;
 }
