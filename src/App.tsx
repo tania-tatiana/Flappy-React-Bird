@@ -135,7 +135,7 @@ export default function App() {
 
   return (
     <div onClick={handleJump} className="container">
-      <h1 className="title">Flappy React Cat</h1>
+      <h1 className="title">Flappy React Bird</h1>
       <p className="subtitle">
         Натискай <b>Пробіл</b> або <b>Клік мишкою</b>
       </p>
