@@ -1,0 +1,17 @@
+.pipeTop,
+.pipeBottom {
+  position: absolute;
+  width: 50px;
+  background-color: #2ecc71;
+  border-right: 2px solid #1e8449;
+}
+
+.pipeTop {
+  top: 0;
+  border-bottom: 3px solid #27ae60;
+}
+
+.pipeBottom {
+  bottom: 0;
+  border-top: 3px solid #27ae60;
+}
