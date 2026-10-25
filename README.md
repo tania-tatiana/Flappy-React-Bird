@@ -1,78 +1,45 @@
-# React + TypeScript + Vite
+# 🐦 Flappy React Bird
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Веб-гра в жанрі 2D-аркади, розроблена за допомогою React.js, TypeScript та модульних CSS-стилів[cite: 9, 12].
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Онлайн-деплой
 
-## React Compiler
+Ви можете зіграти в гру прямо зараз у браузері, перейшовши за посиланням:
+👉 **[Посилання на деплой у Vercel](flappy-react-bird.vercel.app)**
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## 📌 Опис проєкту
 
-## Expanding the ESLint configuration
+**«Flappy React Bird»** — це браузерна гра, де гравець керує пташкою, яка повинна долати перешкоди (труби) та збирати бали[cite: 9, 12]. Проєкт демонструє компонентну архітектуру React, обробку ігрової фізики в реальному часі за допомогою `requestAnimationFrame` та типізацію на TypeScript[cite: 9, 12].
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🎮 Основні ігрові механіки
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. **Гравітація та ігровий імпульс:** Персонаж постійно падає під дією гравітації, але піднімається вгору при натисканні клавіші `Пробіл` або кліці мишкою.
+2. **Процедурна генерація перешкод:** Труби генеруються випадковим чином з різною висотою проходу[cite: 9, 12].
+3. **Детекція зіткнень:** Автоматична перевірка перетину координат персонажа з перешкодами та межами екрана[cite: 9, 12].
+4. **Збереження рекордів:** Найкращий результат гравця автоматично зберігається в локальному сховищі браузера (`localStorage`).
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
 
-```
+## 🛠 Стек технологій
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+- **Мова програмування:** TypeScript[cite: 9, 12]
+- **Бібліотека / Фреймворк:** React.js (React Hooks: `useState`, `useEffect`, `useCallback`, `useRef`)[cite: 9, 12]
+- **Стилізація:** CSS Modules (інкапсульовані стилі для кожного компонента)
+- **Збірка та хостинг:** Vite, Vercel
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📦 Локальний запуск (для розробників)
 
-```
+Якщо ви хочете запустити проект локально на своєму комп'ютері:
+
+1. **Клонуйте репозиторій:**
+   ```bash
+   git clone [https://github.com/tania-tatiana/Flappy-React-Bird.git](https://github.com/tania-tatiana/Flappy-React-Bird.git)
+   ```
